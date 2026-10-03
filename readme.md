@@ -1,64 +1,54 @@
-# 🌱 AtlaIA: Optimización de Cultivos de Sorgo mediante IoT y Machine Learning
+# Sistema Integral Enfocado Principalmente en el Cuidado y Ahorro del Agua, Mitigación de la Degradación de Suelos y Optimización Agrícola mediante Biotecnología Simbiótica, Sensores IoT y Machine Learning
 
-[![Python](https://img.shields.io/badge/Python-3.14%2B-blue.svg)](https://www.python.org/)
-[![Scikit-Learn](https://img.shields.io/badge/Machine%20Learning-Random%20Forest-orange.svg)](https://scikit-learn.org/)
-[![Status](https://img.shields.io/badge/Status-En%20Desarrollo-success.svg)]()
+**Institución:** Universidad Autónoma de Querétaro
 
-> **AtlaIA** es una solución tecnológica e innovadora diseñada para el sector agrícola, enfocada específicamente en la optimización del cultivo de **sorgo forrajero**. Combina el monitoreo ambiental en tiempo real (IoT) con un modelo predictivo de Machine Learning y un soporte biológico radicular (micorrizas y PGPB) para garantizar un **35% de ahorro hídrico** y maximizar el rendimiento del suelo.
+> El propósito fundamental y eje rector de este proyecto es el **cuidado, ahorro y conservación masiva del agua**. La agricultura actual enfrenta una crisis severa debido al desperdicio hídrico extremo y a la degradación de los suelos cultivables por el uso intensivo de agroquímicos. Para resolver esta problemática, el sistema integra tecnología y biología con la misión prioritaria de blindar y optimizar el recurso hídrico frente a la severa variabilidad climática, superando simultáneamente los altos costos de los fertilizantes de síntesis química y la falta de monitoreo en tiempo real.
 
 ---
 
-## 🚀 Descripción del Proyecto
+## El Cuidado del Agua como Eje Central de la Problemática
 
-En las regiones áridas y semiáridas (como Querétaro), la agricultura enfrenta una enorme volatilidad climática y un desperdicio crítico de recursos hídricos debido al riego tradicional basado en estimaciones empíricas. 
+El recurso hídrico es el elemento más vulnerable y desperdiciado en los sistemas agrícolas tradicionales, generando una crisis que este proyecto busca erradicar:
+* La degradación masiva de los suelos agrícolas destruye su estructura y reduce drásticamente su capacidad natural de retención de humedad, obligando a realizar riegos constantes, empíricos y altamente ineficientes.
+* El uso descontrolado de agua y fertilizantes sintéticos provoca una baja asimilación de nutrientes, altos costos de producción y la contaminación directa de los mantos acuíferos adyacentes por lixiviación.
+* Los pequeños y medianos agricultores se enfrentan a una vulnerabilidad extrema ante las sequías y la escasez global de agua.
 
-AtlaIA resuelve este problema mediante un enfoque de tres capas:
-1. **Hardware / IoT (Los Ojos):** Nodos sensores basados en microcontroladores (ESP32) que miden temperatura, humedad relativa y condiciones del suelo en tiempo real.
-2. **Biología (El Soporte Físico):** Inoculación de micorrizas y bacterias promotoras del crecimiento vegetal (PGPB) para crear una red simbiótica subterránea que retiene la humedad de manera natural en la raíz.
-3. **Machine Learning (El Cerebro):** Un modelo predictivo que analiza el comportamiento ambiental y la viabilidad del cultivo para anticipar riesgos de estrés hídrico y optimizar la toma de decisiones.
+Para garantizar la máxima eficiencia y protección hídrica, implementamos una solución tecnológica cuyo fin primordial es lograr un alto porcentaje de ahorro en el consumo de agua.
 
 ---
 
-## 📊 Dataset y Workflow de Machine Learning
+## Arquitectura de la Solución para la Conservación del Agua
 
-El proyecto utiliza un pipeline analítico desarrollado en **Jupyter Notebook**, empleando un dataset de clasificación de crecimiento de plantas obtenido directamente de **Kaggle** (`gorororororo23/plant-growth-data-classification`).
+1. **Soporte Biológico Radicular para Retención Hídrica:** Introducción de consorcios microbianos (hongos micorrizógenos arbusculares y bacterias promotoras del crecimiento vegetal) que establecen una simbiosis con la raíz, formando una red subterránea que retiene de manera natural la humedad y mejora la estabilidad física del suelo.
+2. **Monitoreo IoT en Tiempo Real:** Captura continua de variables críticas del suelo (humedad volumétrica, temperatura y conductividad eléctrica) mediante una red de sensores de bajo costo, eliminando el riego empírico y permitiendo suministrar agua únicamente cuando el cultivo lo requiere de forma exacta.
+3. **Machine Learning Predictivo:** Algoritmos de aprendizaje automático que procesan de manera continua las variables ambientales del suelo para predecir las ventanas óptimas de absorción, anticipar el estrés hídrico antes de que dañe el sistema vegetal y maximizar la eficiencia en el uso del agua.
 
-### Variables Analizadas
-* **Variables de Entrada (Features):** 
-  * `Soil_Type` (Tipo de suelo: arcilloso, arenoso, franco, etc.)
-  * `Sunlight_Hours` (Horas de exposición solar)
-  * `Water_Frequency` (Frecuencia de riego)
-  * `Fertilizer_Type` (Insumos: químico, orgánico/biológico, o ninguno)
-  * `Temperature` (°C)
-  * `Humidity` (%)
-* **Variable Objetivo (Target):**
-  * `Growth_Milestone` (Binario: `0` = Fracaso / Estrés severo, `1` = Éxito / Hito de crecimiento óptimo).
+---
+
+## Dataset y Pipeline de Análisis
+
+El modelo analítico se desarrolló en un entorno de **Jupyter Notebook**, utilizando un dataset de clasificación de crecimiento de plantas obtenido de la plataforma **Kaggle** (`gorororororo23/plant-growth-data-classification`).
+
+### Variables del Modelo
+* **Variables de entrada (Features):** Tipo de suelo (`Soil_Type`), horas de sol (`Sunlight_Hours`), frecuencia de riego (`Water_Frequency`), tipo de insumo (`Fertilizer_Type`), temperatura (`Temperature`) y humedad relativa (`Humidity`).
+* **Variable objetivo (Target):** Indicador de hito de crecimiento exitoso o estrés en el cultivo (`Growth_Milestone`).
 
 ### Algoritmo Implementado
-Se implementó un modelo de **Random Forest Classifier** (`n_estimators=100`) para evaluar la correlación entre las condiciones ambientales inestables y el éxito del cultivo. La línea base actual demuestra la alta volatilidad de los suelos sin control tecnológico, justificando la intervención directa de la biotecnología y el monitoreo automatizado de AtlaIA.
+Se implementó un modelo de **Random Forest Classifier** (`n_estimators=100`) para evaluar las condiciones ambientales inestables y establecer una línea base cuantitativa que demuestra la alta volatilidad de los suelos sin control inteligente, justificando la necesidad imperativa de incorporar la biotecnología y la automatización para salvaguardar el recurso hídrico.
 
 ---
 
-## 🛠️ Librerías de Python Utilizadas
+## Librerías de Python Utilizadas
 
-El desarrollo del modelo, preprocesamiento de datos y visualización analítica se apoya en las siguientes librerías del ecosistema de Python:
-
-* `pandas`: Manipulación, limpieza y estructuración de los datos tabulares.
-* `numpy`: Operaciones matemáticas y numéricas eficientes.
-* `scikit-learn`: Implementación del preprocesamiento (`LabelEncoder`), división de datos (`train_test_split`) y entrenamiento del modelo (`RandomForestClassifier`).
-* `matplotlib` & `seaborn`: Generación de diagramas de dispersión y gráficos estadísticos para la validación agronómica.
+* `pandas`: Manipulación y estructuración de los datos tabulares.
+* `numpy`: Procesamiento numérico y operaciones matriciales.
+* `scikit-learn`: Preprocesamiento (`LabelEncoder`), partición de datos (`train_test_split`) y entrenamiento del modelo (`RandomForestClassifier`).
+* `matplotlib` y `seaborn`: Generación de gráficos estadísticos y visualización analítica.
 
 ---
 
-## 📈 Visualizaciones Clave
+## Impacto Principal en el Recurso Hídrico y Ambiental
 
-El sistema genera análisis gráficos automatizados para validar el impacto agronómico:
-* **Temperatura vs. Humedad:** Visualiza la dispersión de puntos críticos donde la planta entra en estrés hídrico frente a los rangos óptimos de supervivencia.
-* **Impacto por Tipo de Insumo:** Compara estadísticamente el rendimiento entre fertilizantes químicos, ausencia de insumos y alternativas orgánicas/biológicas, demostrando la superioridad del consorcio microbiano.
-
----
-
-## 👥 Autores y Competencia
-
-* **Proyecto:** Participante en el concurso de innovación agrícola **Innodrop 2026**.
-* **Desarrollo Técnico y Ciencia de Datos:** Equipo **AtlaIA**.
+* **Conservación y Ahorro Hídrico (Prioridad Máxima):** Garantía de una eficiencia optimizada en el consumo de agua mediante la combinación sinérgica de retención biológica en la raíz y riego inteligente guiado por datos, protegiendo las reservas de agua locales y subterráneas.
+* **Ecológico:** Regeneración de la salud del suelo, disminución de la huella de carbono y prevención absoluta de la lixiviación de nutrientes hacia los mantos acuíferos adyacentes.
+* **Económico y Productivo:** Reducción drástica en los costos de producción por la sustitución parcial de fertilizantes sintéticos y optimización de los volúmenes de riego utilizados en el sistema agrícola.
